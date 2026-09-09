@@ -1,0 +1,157 @@
+/*==============================================================
+    VARIABLES GLOBALES (Para cambios rápidos de color)
+==============================================================*/
+:root {
+    --bg-main: #0f172a;          /* Fondo asfalto más profundo */
+    --bg-card: #1e293b;          /* Color de tarjetas y menús */
+    --border-color: #334155;     /* Bordes sutiles */
+    --text-high: #f8fafc;        /* Texto principal */
+    --text-low: #94a3b8;         /* Texto secundario */
+    
+    /* Colores de Marca Parqueadero LOT */
+    --lot-yellow: #facc15;       /* Amarillo Tráfico */
+    --lot-green: #22c55e;        /* Verde Éxito */
+    --lot-red: #ef4444;          /* Rojo Peligro */
+    --lot-neon-glow: rgba(250, 204, 21, 0.4);
+}
+
+/*==============================================================
+    ESTILOS BASE Y SCROLLBAR
+==============================================================*/
+body {
+    margin: 0;
+    background-color: var(--bg-main);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--text-high);
+    -webkit-font-smoothing: antialiased;
+}
+
+/*==============================================================
+    TÍTULO Y TEXTOS NEÓN
+==============================================================*/
+.neon-text-green {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+    padding: 30px 0;
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: var(--text-high);
+    text-shadow: 0 0 10px rgba(248, 250, 252, 0.2);
+}
+
+.highlight { color: var(--lot-yellow); }
+
+/*==============================================================
+    COMPONENTES PRIMEREACT: MENUBAR
+==============================================================*/
+.menubar-lot {
+    width: 95%;
+    margin: 20px auto !important;
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 12px !important;
+    padding: 10px 25px !important;
+}
+
+/* Estilo unificado para los 3 botones principales */
+.btn-menu-nuevo .p-menuitem-link, 
+.btn-menu-guardar .p-menuitem-link, 
+.btn-menu-eliminar .p-menuitem-link {
+    min-width: 170px;
+    height: 48px;
+    border-radius: 8px !important;
+    font-weight: 700 !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+}
+
+/* Estados Hover Individuales */
+.btn-menu-nuevo .p-menuitem-link { background: var(--lot-yellow) !important; color: #000 !important; }
+.btn-menu-nuevo:hover .p-menuitem-link { transform: translateY(-3px); box-shadow: 0 10px 20px -5px var(--lot-neon-glow) !important; }
+
+.btn-menu-guardar .p-menuitem-link { background: var(--lot-green) !important; color: #fff !important; }
+.btn-menu-guardar:hover .p-menuitem-link { transform: translateY(-3px); box-shadow: 0 10px 20px -5px rgba(34, 197, 94, 0.5) !important; }
+
+.btn-menu-eliminar .p-menuitem-link { background: var(--lot-red) !important; color: #fff !important; }
+.btn-menu-eliminar:hover .p-menuitem-link { transform: translateY(-3px); box-shadow: 0 10px 20px -5px rgba(239, 68, 68, 0.5) !important; }
+
+/*==============================================================
+    BUSCADOR (CORRECCIÓN DE ICONOS)
+==============================================================*/
+/* Contenedor del buscador */
+.p-input-icon-left {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* La Lupa */
+.p-input-icon-left > i {
+    position: absolute;
+    left: 15px;
+    color: var(--text-low);
+    z-index: 1;
+}
+
+/* El Input de búsqueda */
+.p-inputtext {
+    background: #111827 !important;
+    border: 1px solid var(--border-color) !important;
+    color: white !important;
+    padding: 12px 12px 12px 45px !important; /* Espacio para la lupa */
+    border-radius: 8px;
+    width: 300px;
+    transition: all 0.3s ease;
+}
+
+.p-inputtext:focus {
+    border-color: var(--lot-yellow) !important;
+    box-shadow: 0 0 0 2px rgba(250, 204, 21, 0.2) !important;
+    outline: none;
+}
+
+/*==============================================================
+    TABLA DE DATOS (DATA TABLE)
+==============================================================*/
+.tabla-wrapper {
+    width: 95%;
+    margin: 20px auto;
+    background: var(--bg-card);
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.p-datatable-header {
+    background: transparent !important;
+    border: none !important;
+    padding: 10px 0 20px 0 !important;
+}
+
+/*==============================================================
+    BOTÓN NEÓN (DASHBOARD)
+==============================================================*/
+.btn-neon {
+    background: transparent;
+    color: var(--lot-yellow);
+    border: 2px solid var(--lot-yellow);
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-neon:hover {
+    background: var(--lot-yellow);
+    color: var(--bg-main);
+    box-shadow: 0 0 25px var(--lot-neon-glow);
+    transform: translateY(-2px);
+}

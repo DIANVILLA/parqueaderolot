@@ -1,0 +1,203 @@
+/* ============================================================
+   ASIGANAR ESPACIO MANUAL
+   ============================================================ */
+
+.modal-overlay-asignacion {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(2px);
+}
+
+.modal-content-asignacion {
+    background: linear-gradient(145deg, #0a0a0a, #151515);
+    border: 2px solid #00ff00;
+    border-radius: 16px;
+    padding: 30px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
+    animation: slideInModal 0.3s ease-out;
+}
+
+@keyframes slideInModal {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================================
+   ENCABEZADO DEL MODAL
+   ============================================================ */
+
+.modal-header-asignacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(0, 255, 0, 0.3);
+}
+
+.modal-header-asignacion h2 {
+    margin: 0;
+    color: #00ff00;
+    font-size: 1.5rem;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.4);
+    letter-spacing: 2px;
+}
+
+.modal-close-btn {
+    background: transparent;
+    border: 1px solid #ff6400;
+    color: #ff6400;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.modal-close-btn:hover {
+    background: #ff6400;
+    color: white;
+    box-shadow: 0 0 15px rgba(255, 100, 0, 0.4);
+}
+
+/* ============================================================
+   CUERPO DEL MODAL
+   ============================================================ */
+
+.modal-body-asignacion {
+    margin-bottom: 25px;
+}
+
+.espacio-info {
+    background: rgba(0, 255, 0, 0.05);
+    border: 1px solid rgba(0, 255, 0, 0.2);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.info-label {
+    color: #888;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 5px 0;
+}
+
+.info-valor {
+    color: #00ff00;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.3);
+}
+
+.modal-question {
+    background: rgba(255, 165, 0, 0.05);
+    border-left: 3px solid #ffa500;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.pregunta {
+    color: #ccc;
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ============================================================
+   PIE DEL MODAL
+   ============================================================ */
+
+.modal-footer-asignacion {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.btn-asignacion {
+    flex: 1;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+/* Botón Manual - Verde */
+.btn-manual {
+    background: transparent;
+    border: 2px solid #00ff00;
+    color: #00ff00;
+}
+
+.btn-manual:hover {
+    background: #00ff00;
+    color: #000;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Botón Automático - Naranja */
+.btn-automatica {
+    background: transparent;
+    border: 2px solid #ffa500;
+    color: #ffa500;
+}
+
+.btn-automatica:hover {
+    background: #ffa500;
+    color: #000;
+    box-shadow: 0 0 20px rgba(255, 165, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 600px) {
+    .modal-content-asignacion {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .modal-header-asignacion h2 {
+        font-size: 1.2rem;
+    }
+
+    .info-valor {
+        font-size: 1.4rem;
+    }
+
+    .modal-footer-asignacion {
+        flex-direction: column;
+    }
+
+    .btn-asignacion {
+        width: 100%;
+    }
+}

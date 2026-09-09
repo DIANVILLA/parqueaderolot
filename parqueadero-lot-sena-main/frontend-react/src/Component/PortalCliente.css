@@ -1,0 +1,276 @@
+.portal-cliente {
+    min-height: 100vh;
+    padding: 42px;
+    color: #fff;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.86)),
+        var(--fondo-parqueadero);
+    background-size: cover;
+    background-position: center;
+}
+
+.cliente-hero {
+    max-width: 1180px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.cliente-hero h1 {
+    margin: 0 0 8px;
+    color: #00ff00;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+}
+
+.cliente-hero p {
+    color: #d8d8d8;
+    max-width: 720px;
+}
+
+.cliente-salir {
+    min-width: 110px;
+    min-height: 38px;
+    border: 1px solid #ff3b5c;
+    border-radius: 8px;
+    background: rgba(255, 59, 92, 0.08);
+    color: #ff3b5c;
+    font-weight: 900;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.cliente-salir:hover {
+    background: rgba(255, 59, 92, 0.16);
+    box-shadow: 0 0 14px rgba(255, 59, 92, 0.25);
+}
+
+.cliente-alerta {
+    max-width: 1180px;
+    margin: 0 auto 18px;
+    padding: 12px 16px;
+    border: 1px solid #00ff00;
+    border-radius: 8px;
+    background: rgba(0, 255, 0, 0.1);
+    color: #00ff00;
+    font-weight: 800;
+}
+
+.cliente-grid {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
+    gap: 18px;
+}
+
+.cliente-panel {
+    padding: 22px;
+    border: 1px solid rgba(0, 255, 0, 0.45);
+    border-radius: 8px;
+    background: rgba(10, 10, 10, 0.78);
+    box-shadow: 0 0 24px rgba(0, 255, 0, 0.08);
+}
+
+.cliente-panel h2 {
+    margin: 0 0 18px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.cliente-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.cliente-form-grid input,
+.cliente-form-grid select {
+    width: 100%;
+    min-height: 42px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    background: #050505;
+    color: #fff;
+    padding: 0 12px;
+    font-weight: 700;
+}
+
+.cliente-id-principal {
+    border-color: #00ff00 !important;
+    box-shadow: 0 0 14px rgba(0, 255, 0, 0.16);
+}
+
+.vehiculo-selector {
+    grid-column: 1 / -1;
+}
+
+.cliente-panel button {
+    min-height: 42px;
+    border: 1px solid #00ff00;
+    border-radius: 8px;
+    background: #00ff00;
+    color: #000;
+    font-weight: 900;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn-consultar-cliente {
+    width: 100%;
+    margin: 0 !important;
+}
+
+.btn-guardar-cliente {
+    margin: 0 !important;
+    background: rgba(0, 255, 0, 0.08) !important;
+    color: #00ff00 !important;
+}
+
+.cliente-panel button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.cliente-panel form button,
+.cliente-panel > button,
+form.cliente-panel button {
+    width: 100%;
+    margin-top: 16px;
+}
+
+.cliente-panel small {
+    display: block;
+    margin-top: 10px;
+    color: #aaa;
+}
+
+.estado-panel p {
+    margin: 8px 0;
+}
+
+.cupo-grande {
+    display: grid;
+    place-items: center;
+    width: 140px;
+    height: 86px;
+    margin-bottom: 16px;
+    border: 2px solid #00ff00;
+    border-radius: 8px;
+    color: #00ff00;
+    font-size: 2.4rem;
+    font-weight: 900;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.18);
+}
+
+.cupo-grande.ocupado {
+    border-color: #ff3b5c;
+    color: #ff3b5c;
+    box-shadow: 0 0 20px rgba(255, 59, 92, 0.22);
+}
+
+.cliente-actions {
+    display: grid;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.cliente-actions .danger {
+    border-color: #ff3b5c;
+    background: transparent;
+    color: #ff3b5c;
+}
+
+.historial-panel {
+    max-width: 1180px;
+    margin: 18px auto 0;
+}
+
+.reserva-row {
+    display: grid;
+    grid-template-columns: 1.6fr 0.7fr 0.5fr 1fr 0.7fr;
+    gap: 12px;
+    padding: 12px;
+    border: 1px solid #222;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.42);
+    margin-bottom: 8px;
+}
+
+.historial-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.historial-header h2 {
+    margin: 0;
+}
+
+.historial-filtros {
+    display: flex;
+    gap: 10px;
+}
+
+.historial-filtros input {
+    min-height: 36px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    background: #050505;
+    color: #fff;
+    padding: 0 10px;
+}
+
+.reserva-row strong {
+    color: #00ff00;
+}
+
+@media (max-width: 860px) {
+    .portal-cliente {
+        padding: 16px 10px 28px;
+    }
+
+    .cliente-hero {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cliente-hero h1 {
+        font-size: 1.65rem;
+    }
+
+    .cliente-salir {
+        width: 100%;
+    }
+
+    .cliente-grid,
+    .cliente-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cliente-panel {
+        padding: 16px;
+    }
+
+    .cliente-panel h2 {
+        font-size: 1.15rem;
+    }
+
+    .reserva-row {
+        grid-template-columns: 1fr;
+    }
+
+    .historial-header,
+    .historial-filtros {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .cupo-grande {
+        width: 100%;
+    }
+}

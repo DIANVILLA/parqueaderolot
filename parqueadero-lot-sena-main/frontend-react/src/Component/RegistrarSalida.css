@@ -1,0 +1,858 @@
+/* ==============================================================
+   INICIO: 1. CONFIGURACIÓN DE FONDO Y CUERPO (DARK MODE TOTAL)
+   ============================================================== */
+.salida-container {
+    padding: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    min-height: 100vh;
+    background: transparent;
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* ==============================================================
+   FIN: 1. CONFIGURACIÓN DE FONDO Y CUERPO 
+   ============================================================== */
+
+/* ==============================================================
+   INICIO: 2. TÍTULOS PRINCIPALES EN VERDE NEÓN
+   ============================================================== */
+.neon-text-green {
+    color: #ffffff; 
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: left;
+    padding: 25px 0;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.highlight-green {
+    color: #00ff00 !important; 
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.highlight-yellow {
+    color: #facc15 !important; 
+}
+/* ==============================================================
+   FIN: 2. TÍTULOS PRINCIPALES EN VERDE NEÓN
+   ============================================================== */
+
+/* ==============================================================
+   INICIO: 3. BLOQUE DEL BUSCADOR (DISEÑO DE PLACA FÍSICA)
+   ============================================================== */
+.card-salida {
+    backdrop-filter: blur(10px);
+    background: rgba(13, 13, 13, 0.88) !important; 
+    border: 2px solid #00ff00 !important; 
+    border-radius: 15px;
+    padding: 35px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.15); 
+}
+
+.buscador-box-pro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.plate-inputs-container {
+    display: flex;
+    align-items: center;
+    background: #000000; 
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 12px 25px;
+}
+
+.input-plate {
+    background: transparent !important;
+    border: none !important;
+    color: #ffffff !important; 
+    font-size: 3rem;
+    font-weight: 900;
+    width: 110px;
+    text-align: center;
+    outline: none;
+    text-transform: uppercase;
+}
+
+.plate-divider {
+    color: #333;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0 10px;
+}
+/* ==============================================================
+   FIN: 3. BLOQUE DEL BUSCADOR
+   ============================================================== */
+
+/* ==============================================================
+   INICIO: 4. BOTONES DE ACCIÓN (ESTILO LOT)
+   ============================================================== */
+.btn-buscar-pro {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    font-weight: 900 !important;
+    border-radius: 8px !important;
+    padding: 18px 35px !important;
+    min-width: 150px !important;
+    height: 65px !important;
+    cursor: pointer;
+    border: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-buscar-pro:hover {
+    background-color: #00ff00 !important; 
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.6) !important;
+    transform: translateY(-3px);
+}
+/* ==============================================================
+   FIN: 4. BOTONES DE ACCIÓN
+   ============================================================== */
+
+/* ==============================================================
+   INICIO: 5. GRILLA DE RESULTADOS Y BORDES LATERALES
+   ============================================================== */
+.grid-salida {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.punto-titulo {
+    color: #00ff00; 
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+    border-bottom: 1px solid #1a1a1a;
+    padding-bottom: 10px;
+}
+
+.border-green-neon { 
+    border: 2px solid #00ff00 !important; 
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.1);
+}
+/* ==============================================================
+   FIN: 5. GRILLA DE RESULTADOS Y BORDES LATERALES
+   ============================================================== */
+
+/* ==============================================================
+   INICIO: 6. CALCULADORA Y RESUMEN DE COBRO
+   ============================================================== */
+.total-display {
+    background: #000000 !important;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #00ff00; 
+    margin-top: 15px;
+}
+
+.monto-neon {
+    color: #00ff00 !important; 
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
+}
+
+.label-tiempo {
+    font-size: 0.85rem;
+    color: #facc15; 
+    text-transform: uppercase;
+}
+/* ==============================================================
+   FIN: 6. CALCULADORA Y RESUMEN DE COBRO
+   ============================================================== */
+
+/* ==============================================================
+   INICIO: 7. FORMULARIO DE PAGO E INPUTS
+   ============================================================== */
+.input-lote {
+    width: 100%;
+    background: #0d0d0d !important;
+    border: 1px solid #333 !important;
+    color: #ffffff !important;
+    padding: 15px !important;
+    border-radius: 8px !important;
+    margin-bottom: 15px !important;
+}
+
+.input-lote:focus {
+    border-color: #00ff00 !important; 
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+    outline: none;
+}
+/* ==============================================================
+   FIN: 7. FORMULARIO DE PAGO E INPUTS
+   ============================================================== */
+
+/* ==============================================================
+   INICIO: 8. BOTÓN FINALIZAR (LIBERACIÓN DE PUESTO)
+   ============================================================== */
+.full-width {
+    grid-column: span 2;
+}
+
+.btn-finalizar-neon {
+    width: 100%;
+    background: transparent !important;
+    color: #00ff00 !important;
+    border: 2px solid #00ff00 !important;
+    padding: 25px !important;
+    border-radius: 12px !important;
+    font-size: 1.6rem !important;
+    font-weight: 900 !important;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.btn-finalizar-neon:hover:not(.disabled-visual) {
+    background: #00ff00 !important;
+    color: #000000 !important;
+    box-shadow: 0 0 40px rgba(0, 255, 0, 0.5) !important;
+}
+/* ==============================================================
+   FIN: 8. BOTÓN FINALIZAR
+   ============================================================== */
+
+/* ==============================================================
+   INICIO: 9. FUERZA BRUTA (ICONOS Y LUPA)
+   ============================================================== */
+.p-input-icon-left > i {
+    color: #00ff00 !important; 
+}
+/* ==============================================================
+   FIN: 9. FUERZA BRUTA
+   ============================================================== */
+
+/* ==============================================================
+   INICIO: 10. ESTILOS DE IMPRESIÓN
+   ============================================================== */
+@media print {
+    .salida-container { background: white !important; color: black !important; }
+    .card-salida { border: 1px solid black !important; }
+}
+/* ==============================================================
+   FIN: 10. ESTILOS DE IMPRESIÓN
+   ============================================================== */
+
+/* ==============================================================
+   INICIO: 11. NUEVA BOTONERA TOUCH DE PAGOS (POS)
+   ============================================================== */
+.metodo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* ============================================================**
+   FIN: 11. NUEVA BOTO TOUCH DE PAGOS (POS)
+   ============================================================ */  
+
+.btn-mixto {
+    padding: 8px 15px;
+    background: #111;
+    border: 1px solid #333;
+    color: #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-mixto:hover {
+    border-color: #00ff00;
+    color: #00ff00;
+}
+
+.btn-mixto.activo-mixto {
+    border: 2px solid #00ff00;
+    color: #00ff00;
+    background: rgba(0, 255, 0, 0.1);
+    /* El brillo neón que querías */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.4), inset 0 0 8px rgba(0, 255, 0, 0.1);
+}
+/* ============================================================
+   FIN: ESTILOS PARA EL BOTÓN PAGO MIXTO
+   ============================================================ */
+
+.grid-metodos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.btn-metodo {
+    padding: 12px 5px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #111;
+    color: #ccc;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-metodo:hover { border-color: #555; }
+
+/* Estados activos iluminados */
+.btn-metodo.activo-cash { border: 2px solid #00ff00; color: #00ff00; background: rgba(0, 255, 0, 0.1); }
+.btn-metodo.activo-nequi { border: 2px solid #E10098; color: #E10098; background: rgba(225, 0, 152, 0.1); }
+.btn-metodo.activo-davip { border: 2px solid #ED1C24; color: #ED1C24; background: rgba(237, 28, 36, 0.1); }
+.btn-metodo.activo-trans { border: 2px solid #FFD100; color: #FFD100; background: rgba(255, 209, 0, 0.1); }
+.btn-metodo.activo-card { border: 2px solid #0055FF; color: #0055FF; background: rgba(0, 85, 255, 0.1); }
+/* ==============================================================
+   FIN: 11. NUEVA BOTONERA TOUCH DE PAGOS
+   ============================================================== */
+
+/* ==============================================================
+   INICIO: 12. CALCULADORA Y BILLETES RÁPIDOS
+   ============================================================== */
+.payment-module {
+    animation: fadeIn 0.3s ease-out;
+}
+
+.payment-module > label {
+    color: #fff;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+/* ==============================================================
+   DISEÑO: CUADRÍCULA 4x4 PARA BILLETES CON EFECTO NEÓN
+   ============================================================== */
+.billetes-rapidos, .billetes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.btn-billete {
+    width: 100%;
+    padding: 10px 5px;
+    text-align: center;
+    font-size: 0.9rem;
+    background: #222;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    /* La transición hace que el brillo sea suave y elegante */
+    transition: all 0.3s ease; 
+}
+
+/* EL EFECTO MÁGICO AL PASAR EL MOUSE (Botones normales) */
+.btn-billete:hover { 
+    background: rgba(0, 255, 0, 0.1); /* Fondo levemente verde */
+    color: #00ff00; /* Texto verde neón */
+    border: 1px solid #00ff00; /* Borde encendido */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.4), inset 0 0 8px rgba(0, 255, 0, 0.1); /* Resplandor exterior e interior */
+    transform: translateY(-2px); /* Se levanta un poquito */
+}
+
+.btn-billete-exacto {
+    width: 100%;
+    padding: 10px 5px;
+    text-align: center;
+    font-size: 0.9rem;
+    background: #00ff00;
+    color: #000;
+    border: 1px solid #00ff00;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 900;
+    transition: all 0.3s ease;
+}
+
+/* EL EFECTO MÁGICO AL PASAR EL MOUSE (Botón Exacto) */
+.btn-billete-exacto:hover {
+    background: #00e600; /* Un verde ligerísimamente más intenso */
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.7); /* Mucho más resplandor porque es el botón principal */
+    transform: translateY(-2px);
+}
+
+.btn-billete {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #444;
+    background: #222;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.btn-billete:hover { background: #333; }
+
+.btn-billete-exacto {
+    flex: 1;
+    padding: 10px;
+    background: #00ff00;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.vueltas-panel {
+    margin-top: 15px;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #333;
+    border-radius: 8px;
+}
+
+.vueltas-panel.ok { background: rgba(0, 255, 0, 0.1); border-color: rgba(0, 255, 0, 0.3); }
+.vueltas-panel.falta { background: rgba(255, 0, 0, 0.1); border-color: rgba(255, 0, 0, 0.3); }
+
+.vueltas-titulo {
+    margin: 0;
+    color: #aaa;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+.vueltas-valor {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.vueltas-valor.ok { color: #00ff00; }
+.vueltas-valor.falta { color: #FF003C; }
+/* ==============================================================
+   FIN: 12. CALCULADORA Y BILLETES RÁPIDOS
+   ============================================================== */
+
+/* ==============================================================
+   INICIO: 13. MONITOR EN VIVO Y BILLETERAS DIGITALES
+   ============================================================== */
+.btn-notificacion {
+    width: 100%;
+    padding: 15px !important;
+    border: none !important;
+    color: white !important;
+    font-weight: bold !important;
+    margin-top: 5px;
+}
+
+.bg-nequi { background-color: #E10098 !important; }
+.bg-davip { background-color: #ED1C24 !important; }
+
+.estado-msg {
+    text-align: center;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.estado-msg.esperando { color: #FFD100; background: rgba(255, 209, 0, 0.1); border: 1px dashed #FFD100; }
+.estado-msg.procesando { color: #0055FF; background: rgba(0, 85, 255, 0.1); border: 1px dashed #0055FF; }
+.estado-msg.exitoso { color: #000; background: #00ff00; box-shadow: 0 0 15px rgba(0, 255, 0, 0.4); }
+/* ==============================================================
+   FIN: 13. MONITOR EN VIVO Y BILLETERAS DIGITALES
+   ============================================================== */
+
+/* ==============================================================
+   INICIO: 14. PANTALLA CLIENTE Y PAGO MIXTO
+   ============================================================== */
+.btn-qr {
+    width: 100%;
+    background: #333 !important;
+    color: white !important;
+    padding: 15px !important;
+    border: 1px solid #555 !important;
+}
+
+.nota-qr {
+    color: #aaa;
+    font-size: 0.8rem;
+    margin-top: 12px;
+}
+
+.mixto-panel {
+    margin-top: 20px;
+    padding: 18px;
+    background: rgba(12, 12, 7, 0.72);
+    border: 1px solid rgba(250, 204, 21, 0.65);
+    border-radius: 10px;
+    box-shadow: inset 0 0 18px rgba(250, 204, 21, 0.08);
+}
+
+.mixto-titulo {
+    color: #facc15;
+    font-size: 0.82rem;
+    margin-bottom: 8px;
+    margin-top: 12px;
+    display: block;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+}
+
+.mixto-nota {
+    font-size: 0.8rem;
+    color: #aaa;
+    margin-top: 8px;
+    line-height: 1.45;
+}
+
+.mixto-nota.error {
+    color: #ff3b5c;
+    font-weight: 800;
+}
+
+.mixto-total,
+.mixto-saldo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.mixto-total {
+    background: rgba(0, 255, 0, 0.08);
+    border: 1px solid rgba(0, 255, 0, 0.45);
+}
+
+.mixto-saldo {
+    margin-top: 10px;
+    background: rgba(250, 204, 21, 0.08);
+    border: 1px solid rgba(250, 204, 21, 0.45);
+}
+
+.mixto-saldo.error {
+    background: rgba(255, 59, 92, 0.08);
+    border-color: rgba(255, 59, 92, 0.75);
+}
+
+.mixto-total span,
+.mixto-saldo span {
+    color: #cfcfcf;
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.mixto-total strong,
+.mixto-saldo strong {
+    color: #00ff00;
+    font-size: 1.15rem;
+    white-space: nowrap;
+}
+
+.mixto-saldo.error strong {
+    color: #ff3b5c;
+}
+
+.mixto-resumen {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 8px;
+    padding: 12px;
+    border: 1px solid rgba(0, 255, 0, 0.25);
+    border-radius: 8px;
+    background: rgba(0, 255, 0, 0.05);
+    color: #00ff00;
+    font-weight: 800;
+}
+/* ==============================================================
+   FIN: 14. PANTALLA CLIENTE Y PAGO MIXTO
+   ============================================================== */
+
+/* ==============================================================
+   INICIO: 15. ACCIONES MAESTRAS Y SEGURIDAD
+   ============================================================== */
+.master-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.disabled-visual {
+    opacity: 0.3 !important;
+    cursor: not-allowed !important;
+    pointer-events: none; /* Evita cualquier interacción si falta dinero */
+}
+
+.btn-emergencia {
+    background: transparent;
+    border: none;
+    color: #FF003C;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 10px;
+    transition: color 0.3s;
+} 
+/* ==============================================================
+   FIN: 15. ACCIONES MAESTRAS Y SEGURIDAD
+   ============================================================== */
+
+   /* ==============================================================
+   INICIO: ESTILOS DEL BOTÓN DE APROBACIÓN MANUAL (EMERGENCIA)
+   ============================================================== */
+.btn-emergencia {
+    margin-top: 20px;
+    padding: 15px;
+    width: 100%;
+    /* Fondo transparente para que combine con el diseño oscuro */
+    background: transparent;
+    /* Borde rojo neón fino */
+    border: 1px solid #FF003C;
+    color: #FF003C;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Efecto al pasar el mouse (Brillo tipo neón) */
+.btn-emergencia:hover {
+    background: rgba(255, 0, 60, 0.1);
+    border-color: #ff4d4d;
+    color: #ff4d4d;
+    box-shadow: 0 0 15px rgba(255, 0, 60, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Estilo para el icono de advertencia dentro del botón */
+.icon-warning {
+    font-size: 1.1rem;
+    /* Un pequeño brillo extra para el icono */
+    text-shadow: 0 0 5px rgba(255, 0, 60, 0.8);
+}
+/* ==============================================================
+   FIN: ESTILOS DEL BOTÓN DE APROBACIÓN MANUAL (EMERGENCIA)
+   ============================================================== */
+   /* ==============================================================
+   INICIO: ESTILOS EXCLUSIVOS PARA IMPRESIÓN (RECIBOS)
+   ============================================================== */
+/* 1. Ocultar el ticket mientras usamos la aplicación en pantalla */
+.ticket-impresion {
+    display: none;
+}
+
+/* 2. Cuando el usuario le da a "Imprimir", se activa esto: */
+@media print {
+    /* Ocultamos TODA la interfaz oscura, botones y menús */
+    body * {
+        visibility: hidden;
+    }
+
+    /* Solo hacemos visible el ticket y lo que esté dentro de él */
+    .ticket-impresion, .ticket-impresion * {
+        visibility: visible;
+    }
+
+    /* Configuramos el ticket para papel térmico (blanco y negro) */
+    .ticket-impresion {
+        display: block;
+        
+        /* TRUCO MAESTRO PARA CENTRAR EN IMPRESIÓN */
+        position: absolute; /* Lo saca de los contenedores de React */
+        top: 0;             /* Lo pega bien arriba en la hoja */
+        left: 0;            
+        right: 0;           
+        margin: 0 auto;     /* Calcula el centro exacto automáticamente */
+        
+        width: 80mm; /* Ancho estándar de impresora POS */
+        padding: 15px 0; 
+        
+        font-family: 'Courier New', Courier, monospace;
+        color: #000 !important; 
+        background: #fff !important; 
+        font-size: 12px;
+    }
+
+    .ticket-titulo {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        margin: 5px 0;
+    }
+
+    .ticket-centro {
+        text-align: center;
+        margin: 2px 0;
+    }
+
+    .ticket-impresion p {
+        margin: 4px 0;
+        text-align: left;
+    }
+
+    .ticket-divisor {
+        text-align: center;
+        margin: 5px 0;
+        font-weight: bold;
+    }
+
+    .ticket-total {
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 8px 0;
+    }
+
+    /* Quitamos márgenes de página por defecto de Chrome/Edge */
+    @page {
+        margin: 0;
+    }
+}
+
+/* ==============================================================
+   FIN: ESTILOS EXCLUSIVOS PARA IMPRESIÓN
+   ============================================================== */
+
+@media (max-width: 768px) {
+    .salida-container {
+        max-width: 100%;
+        padding: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .neon-text-green {
+        font-size: 1.15rem;
+        letter-spacing: 1.4px;
+        padding: 10px 0 16px;
+        text-align: center;
+    }
+
+    .card-salida {
+        border-radius: 12px;
+        margin-bottom: 14px;
+        padding: 14px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .buscador-box-pro {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .plate-inputs-container {
+        justify-content: center;
+        padding: 10px 12px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .input-plate {
+        font-size: clamp(1.9rem, 10vw, 2.35rem);
+        width: min(28vw, 96px);
+    }
+
+    .plate-divider {
+        font-size: 2rem;
+        margin: 0 4px;
+    }
+
+    .btn-buscar-pro {
+        height: 48px !important;
+        min-width: 0 !important;
+        padding: 12px !important;
+        width: 100%;
+    }
+
+    .grid-salida {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .punto-titulo {
+        font-size: 0.78rem;
+        margin-bottom: 12px;
+    }
+
+    .total-display {
+        padding: 18px 12px;
+    }
+
+    .monto-neon {
+        font-size: clamp(2rem, 12vw, 2.8rem);
+    }
+
+    .metodo-header {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .grid-metodos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .billetes-rapidos,
+    .billetes-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .mixto-panel {
+        padding: 12px;
+    }
+
+    .mixto-total,
+    .mixto-saldo {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .btn-finalizar-neon {
+        border-radius: 12px !important;
+        font-size: 1rem !important;
+        padding: 16px 12px !important;
+    }
+
+    .btn-emergencia {
+        font-size: 0.78rem;
+        padding: 12px;
+    }
+}

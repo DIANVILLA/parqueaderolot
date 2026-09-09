@@ -1,0 +1,64 @@
+/* ==========================================================================
+   PASO 1: SISTEMA DE TEMAS GLOBAL (Cyberpunk / Dark Mode)
+   ========================================================================== */
+:root {
+  /* Fondos de pantalla principales */
+  --fondo-oscuro-total: #050505; /* El negro asfalto de tu fondo */
+  --fondo-tarjeta: #111111;      /* El gris oscuro de la caja de login y contenedores */
+  --fondo-parqueadero:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 12, 0, 0.68), rgba(0, 0, 0, 0.9)),
+    radial-gradient(circle at 48% 38%, rgba(57, 255, 20, 0.13), transparent 32%),
+    url('https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=1920&q=80');
+  
+  /* Tu Verde Neón unificado (El alma del proyecto) */
+  --verde-neon: #39FF14; 
+  --verde-neon-brillo: rgba(57, 255, 20, 0.2);
+  --verde-neon-hover: #55ff33;
+
+  /* Colores de Texto */
+  --texto-blanco: #ffffff;
+  --texto-apagado: #888888;
+
+  /* Bordes de casillas y elementos */
+  --borde-tarjeta: #1a1a1a;
+  --borde-neon: #39FF14;
+}
+
+/* Aplicación automática del fondo a toda la web */
+body {
+  margin: 0;
+  background: var(--fondo-parqueadero);
+  background-attachment: fixed;
+  background-color: var(--fondo-oscuro-total);
+  background-position: center;
+  background-size: cover;
+  color: var(--texto-blanco);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+.icon-inline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.45rem;
+  line-height: 1;
+}
+
+input,
+textarea,
+select {
+  text-transform: uppercase;
+}
+
+.email-lowercase,
+input[type="email"] {
+  text-transform: lowercase;
+}

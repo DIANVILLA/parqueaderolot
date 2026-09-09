@@ -1,0 +1,342 @@
+/* ==============================================================
+   INICIO: CONFIGURACIÓN GENERAL Y FONDOS
+   ============================================================== */
+.ocupacion-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+    background-color: #000000;
+    color: #ffffff;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.titulo-principal {
+    color: #00ff00;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    font-weight: 900;
+    border-bottom: 1px solid #1a1a1a;
+    padding-bottom: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* ==============================================================
+   FIN: CONFIGURACIÓN GENERAL Y FONDOS
+   ============================================================== */
+
+/* ==============================================================
+   INICIO: DASHBOARD DE ZONAS (CAJONES HORIZONTALES)
+   ============================================================== */
+.dashboard-zonas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Fuerza 3 columnas horizontales iguales */
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card-zona {
+    background: #0d0d0d;
+    border: 2px solid #333;
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.card-zona:hover {
+    border-color: #00ff00; /* Se ilumina en verde al pasar el mouse */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.zona-titulo {
+    color: #aaa;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+    letter-spacing: 1px;
+}
+
+.zona-datos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dato {
+    display: flex;
+    flex-direction: column;
+}
+
+.dato span {
+    font-size: 0.75rem;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.dato h2 {
+    margin: 0;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.dato .stat-neon {
+    color: #00ff00; /* La disponibilidad siempre brilla en verde */
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.4);
+}
+/* ==============================================================
+   FIN: DASHBOARD DE ZONAS (CAJONES HORIZONTALES)
+   ============================================================== */
+
+/* ==============================================================
+   INICIO: BARRA DE BÚSQUEDA Y FILTROS
+   ============================================================== */
+.filtros-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    background: #0d0d0d;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #222;
+}
+
+.input-busqueda, .select-filtro {
+    background: #000;
+    border: 1px solid #444;
+    color: #fff;
+    padding: 12px;
+    border-radius: 6px;
+    outline: none;
+    font-size: 0.95rem;
+}
+
+.input-busqueda {
+    flex: 2; /* Toma más espacio que los selectores */
+}
+
+.select-filtro {
+    flex: 1;
+    cursor: pointer;
+}
+
+.input-busqueda:focus, .select-filtro:focus {
+    border-color: #00ff00;
+    box-shadow: 0 0 8px rgba(0, 255, 0, 0.2);
+}
+/* ==============================================================
+   FIN: BARRA DE BÚSQUEDA Y FILTROS
+   ============================================================== */
+
+/* ==============================================================
+   INICIO: TABLA EN VIVO Y ALERTAS (TAXÍMETRO)
+   ============================================================== */
+.tabla-wrapper {
+    overflow-x: auto;
+    background: #0d0d0d;
+    border-radius: 8px;
+    border: 1px solid #222;
+}
+
+.tabla-ocupacion {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.tabla-ocupacion th {
+    background: #111;
+    color: #00ff00;
+    padding: 15px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid #222;
+}
+
+.tabla-ocupacion td {
+    padding: 15px;
+    border-bottom: 1px solid #1a1a1a;
+    font-size: 0.95rem;
+}
+
+/* Colores de Alerta para vehículos que llevan mucho tiempo */
+.alerta-amarilla td {
+    background: rgba(255, 209, 0, 0.08); /* Más de 5 horas */
+}
+
+.alerta-roja td {
+    background: rgba(255, 0, 60, 0); /* Más de 12/24 horas */
+    color: #d5f507f9;
+    border: 0px solid #2dd80a;
+}
+
+.btn-preliquidar {
+    background: transparent;
+    color: #08fb08;
+    border: 1px solid #2dd80a;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+   font-weight: bold;
+}
+/* ==============================================================
+   INICIO: BOTÓN PRE-LIQUIDAR (Base oscura + Hover Neón)
+   ============================================================== */
+.btn-preliquidar {
+    /* Base tomada de tu diseño btn-metodo */
+    padding: 10px 15px; /* Le di un poco más de espacio a los lados para que la palabra encaje bien */
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #111;
+    color: #ccc;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    
+    /* Importante: La transición en 0.3s hace que el neón encienda suavemente */
+    transition: all 0.3s ease; 
+}
+
+/* Efecto al pasar el mouse */
+.btn-preliquidar:hover {
+    border-color: #39FF14;      /* Borde verde neón */
+    color: #39FF14;             /* Texto verde neón */
+    background: #000;           /* Fondo más oscuro para resaltar el brillo */
+    
+    /* El resplandor verde característico de tu sistema */
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.4); 
+    
+    /* Pequeño salto hacia arriba para dar sensación táctil */
+    transform: translateY(-2px); 
+}
+/* ==============================================================
+   FIN: BOTÓN PRE-LIQUIDAR
+   ============================================================== */
+
+/* ==============================================================
+   FIN: TABLA EN VIVO Y ALERTAS
+   ============================================================== */
+
+/* ==============================================================
+   INICIO: MODAL DE PRE-LIQUIDACIÓN (VENTANA EMERGENTE)
+   ============================================================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85); /* Fondo oscuro semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px); /* Efecto cristalino moderno */
+}
+
+.modal-content {
+    background: #0d0d0d;
+    border: 2px solid #00ff00;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.2);
+    animation: zoomIn 0.3s ease-out;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: #00ff00;
+    text-transform: uppercase;
+}
+
+.monto-modal {
+    font-size: 3rem;
+    margin: 20px 0;
+    color: #00ff00;
+    text-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
+}
+
+.btn-cerrar {
+    width: 100%;
+    background: #FF003C;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s;
+}
+
+.btn-cerrar:hover {
+    background: #cc0030;
+}
+
+@keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+/* ==============================================================
+   FIN: MODAL DE PRE-LIQUIDACIÓN
+   ============================================================== */
+
+@media (max-width: 768px) {
+    .ocupacion-container {
+        max-width: 100%;
+        padding: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .titulo-principal {
+        font-size: 1.25rem;
+        letter-spacing: 1px;
+    }
+
+    .dashboard-zonas {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 16px;
+    }
+
+    .card-zona {
+        padding: 14px;
+    }
+
+    .filtros-container {
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .input-busqueda,
+    .select-filtro {
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .tabla-wrapper {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .tabla-ocupacion {
+        min-width: 680px;
+    }
+
+    .modal-content {
+        padding: 20px;
+        width: calc(100% - 32px);
+    }
+}

@@ -1,0 +1,373 @@
+.reporte-container {
+    color: #f7fff7;
+    max-width: 980px;
+    padding: 28px;
+}
+
+.reporte-header {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.reporte-header .section-title {
+    border-left: 4px solid #39ff14;
+    font-size: 1.9rem;
+    margin: 0 0 10px;
+    padding-left: 14px;
+    text-transform: uppercase;
+}
+
+.operador-texto,
+.muted-report {
+    color: #a6b3aa;
+    margin: 0;
+}
+
+.empleado-view .cierre-form,
+.pin-card,
+.card,
+.auditoria-card {
+    backdrop-filter: blur(12px);
+    background: rgba(10, 10, 10, 0.9);
+    border: 1px solid rgba(57, 255, 20, 0.34);
+    border-radius: 10px;
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.42), inset 0 0 18px rgba(57, 255, 20, 0.04);
+}
+
+.empleado-view .cierre-form {
+    display: grid;
+    gap: 18px;
+    max-width: 760px;
+    padding: 24px;
+}
+
+.alerta-cierre {
+    background: rgba(250, 204, 21, 0.08);
+    border: 1px solid rgba(250, 204, 21, 0.45);
+    border-radius: 8px;
+    color: #facc15;
+    line-height: 1.5;
+    padding: 14px 16px;
+}
+
+.field-group,
+.field-group-multi {
+    display: grid;
+    gap: 10px;
+}
+
+.field-group-multi {
+    grid-template-columns: minmax(150px, 0.8fr) minmax(220px, 1.4fr);
+}
+
+.field-group label,
+.field-group-multi label {
+    color: #a6b3aa;
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.input-cierre,
+.input-pin {
+    background: #050505;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #fff;
+    min-height: 42px;
+    outline: none;
+    padding: 10px 12px;
+    width: 100%;
+}
+
+.input-cierre:focus,
+.input-pin:focus {
+    border-color: #39ff14;
+    box-shadow: 0 0 16px rgba(57, 255, 20, 0.18);
+}
+
+.input-cierre.principal {
+    color: #39ff14;
+    font-size: 1.45rem;
+    font-weight: 900;
+}
+
+.subtitulo-gastos {
+    color: #fff;
+    margin: 6px 0 0;
+}
+
+.btn-cerrar-turno,
+.btn-pin,
+.btn-congelar,
+.btn-exportar,
+.btn-bitacora {
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 900;
+    min-height: 44px;
+    padding: 12px 16px;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+.btn-cerrar-turno,
+.btn-pin {
+    background: #39ff14;
+    color: #031006;
+}
+
+.btn-cerrar-turno:hover,
+.btn-pin:hover {
+    box-shadow: 0 0 22px rgba(57, 255, 20, 0.45);
+    transform: translateY(-1px);
+}
+
+.pin-view {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 62vh;
+}
+
+.pin-card {
+    padding: 34px;
+    text-align: center;
+    width: min(440px, 100%);
+}
+
+.input-pin {
+    color: #39ff14;
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 10px;
+    margin: 20px auto;
+    text-align: center;
+    width: 170px;
+}
+
+.btn-cancelar {
+    background: transparent;
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: #aaa;
+    cursor: pointer;
+    padding: 11px;
+    width: 100%;
+}
+
+.grid-header {
+    align-items: center;
+}
+
+.estadisticas-grid {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-bottom: 16px;
+}
+
+.stat-box {
+    background: rgba(10, 10, 10, 0.88);
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #a6b3aa;
+    padding: 16px;
+}
+
+.stat-box strong {
+    color: #39ff14;
+    display: block;
+    font-size: 1.8rem;
+    margin-top: 6px;
+}
+
+.alerta-box {
+    border-color: #ff4444;
+}
+
+.alerta-box strong,
+.texto-rojo {
+    color: #ff4444;
+}
+
+.reporte-grid-admin {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-bottom: 16px;
+}
+
+.card,
+.auditoria-card {
+    padding: 18px;
+}
+
+.card-titulo,
+.auditoria-titulo {
+    margin: 0 0 14px;
+}
+
+.neon-verde {
+    color: #39ff14;
+}
+
+.neon-amarillo {
+    color: #facc15;
+}
+
+.data-row {
+    align-items: center;
+    border-bottom: 1px solid #202020;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 0;
+}
+
+.total-row {
+    color: #39ff14;
+    font-weight: 900;
+}
+
+.nota-pequena {
+    color: #777;
+    font-size: 0.78rem;
+}
+
+.auditoria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.auditoria-item {
+    padding: 14px;
+    text-align: center;
+}
+
+.borde-lateral {
+    border-left: 1px solid #222;
+    border-right: 1px solid #222;
+}
+
+.auditoria-label {
+    color: #a6b3aa;
+    margin: 0 0 8px;
+}
+
+.auditoria-valor {
+    margin: 0;
+}
+
+.auditoria-diferencia {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.auditoria-diferencia.ok {
+    color: #39ff14;
+}
+
+.auditoria-diferencia.falta {
+    color: #ff4444;
+}
+
+.auditoria-mensaje {
+    color: #a6b3aa;
+}
+
+.cierre-final-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-congelar {
+    background: #ff4444;
+    color: #fff;
+}
+
+.btn-exportar,
+.btn-bitacora {
+    background: #151515;
+    border: 1px solid #39ff14;
+    color: #39ff14;
+}
+
+.alerta-congelado {
+    background: rgba(0, 85, 255, 0.12);
+    border: 1px solid #0055ff;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+@media print {
+    .no-imprimir {
+        display: none !important;
+    }
+
+    .reporte-container {
+        color: #000;
+        max-width: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .field-group-multi,
+    .estadisticas-grid,
+    .reporte-grid-admin,
+    .auditoria-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reporte-header,
+    .cierre-final-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .reporte-container {
+        max-width: 100%;
+        padding: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .reporte-header .section-title {
+        font-size: 1.25rem;
+    }
+
+    .empleado-view .cierre-form,
+    .pin-card,
+    .card,
+    .auditoria-card {
+        padding: 14px;
+    }
+
+    .input-cierre.principal {
+        font-size: 1.15rem;
+    }
+
+    .data-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .cierre-final-container button {
+        width: 100%;
+    }
+}

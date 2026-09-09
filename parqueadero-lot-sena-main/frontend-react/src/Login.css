@@ -1,0 +1,134 @@
+/*=======================================*/
+/* BLOQUE B1: LAYOUT BASE (FONDO)        */
+/*=======================================*/
+.login-container {
+    background-color: #050505; 
+    height: 100vh;             
+    display: flex;             
+    justify-content: center;   
+    align-items: center;       
+}
+
+/*=======================================*/
+/* BLOQUE B2: CAJA PRINCIPAL (LOGIN BOX) */
+/*=======================================*/
+.login-box {
+    background: #111111;       
+    padding: 2.5rem;           
+    border-radius: 12px;       
+    border: 1px solid #39FF14; 
+    width: 380px;              
+    box-sizing: border-box;    
+    box-shadow: 0 0 30px rgba(57, 255, 20, 0.1); 
+}
+
+/*=======================================*/
+/* BLOQUE B3: TEXTOS Y ETIQUETAS         */
+/*=======================================*/
+.main-title { 
+    color: white; 
+    text-align: center; 
+    margin-bottom: 2rem; 
+    font-family: sans-serif;
+}
+
+.highlight { 
+    color: #39FF14; 
+    text-shadow: 0 0 10px #39FF14; 
+}
+
+.field { 
+    margin-bottom: 1.5rem; 
+    width: 100%;
+}
+
+.field label { 
+    color: #888; 
+    display: block; 
+    margin-bottom: 8px; 
+    font-size: 11px; 
+    text-transform: uppercase; 
+}
+
+/*=======================================*/
+/* BLOQUE B4: CONTENEDOR LÓGICO (WRAPPER)*/
+/*=======================================*/
+.custom-input-wrapper {
+    position: relative; 
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/*=======================================*/
+/* BLOQUE B5: ESTILO DE LOS INPUTS       */
+/*=======================================*/
+.custom-padding {
+    width: 100% !important;        
+    background: #1a1a1a !important; 
+    color: white !important;       
+    border: 1px solid #333 !important; 
+    padding: 12px 45px !important; 
+    border-radius: 6px !important;
+    box-sizing: border-box;
+}
+
+.custom-padding:focus {
+    border-color: #39FF14 !important; 
+    outline: none;
+}
+
+/*=======================================*/
+/* BLOQUE B6: POSICIONAMIENTO DE ICONOS  */
+/*=======================================*/
+.icon-left {
+    position: absolute;
+    left: 15px;               
+    color: #39FF14;
+    z-index: 10;
+    pointer-events: none;     
+}
+
+.icon-right-eye {
+    position: absolute !important;
+    right: 15px !important;    
+    top: 50% !important;       
+    transform: translateY(-50%) !important;
+    color: #39FF14 !important; 
+    cursor: pointer;           
+    z-index: 10;
+    font-size: 1.1rem;
+}
+
+.icon-right-eye:hover {
+    color: #ffffff !important; 
+}
+
+/*=======================================*/
+/* BLOQUE B7: BOTÓN DE INGRESO           */
+/*=======================================*/
+.btn-ingresar {
+    background: #39FF14 !important; 
+    border: none !important;
+    color: black !important;        
+    width: 100% !important;
+    font-weight: bold !important;
+    padding: 14px !important;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.3s;               
+}
+
+.btn-ingresar:hover {
+    background: #32e612 !important; 
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
+}
+
+/*=======================================*/
+/* BLOQUE B8: NOTIFICACIONES (TOAST)     */
+/*=======================================*/
+.p-toast .p-toast-message {
+    background: #121212 !important;       
+    border: 1px solid #39ff14 !important; 
+    color: white !important;
+}

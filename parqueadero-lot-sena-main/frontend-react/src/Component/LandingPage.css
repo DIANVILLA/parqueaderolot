@@ -1,0 +1,325 @@
+.landing-lot {
+    min-height: 100vh;
+    background:
+        linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.96)),
+        var(--fondo-parqueadero);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.landing-nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    padding: 18px clamp(18px, 4vw, 64px);
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.18));
+    backdrop-filter: blur(10px);
+}
+
+.landing-brand {
+    background: transparent;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 950;
+    letter-spacing: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.landing-brand span,
+.landing-kicker,
+.landing-section-head p {
+    color: #00ff00;
+    text-shadow: 0 0 12px rgba(0, 255, 0, 0.65);
+}
+
+.landing-nav-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.landing-nav-actions button,
+.landing-actions button,
+.landing-info-card a {
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    font-weight: 900;
+    justify-content: center;
+    min-height: 42px;
+    padding: 0 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.landing-nav-actions button,
+.landing-actions .primary {
+    background: #00ff00;
+    border: 1px solid #00ff00;
+    color: #020702;
+    box-shadow: 0 0 22px rgba(0, 255, 0, 0.24);
+}
+
+.landing-nav-actions .outline,
+.landing-actions .secondary {
+    background: rgba(0, 0, 0, 0.28);
+    border: 1px solid rgba(0, 255, 0, 0.75);
+    color: #00ff00;
+}
+
+.landing-hero {
+    padding: 82px clamp(14px, 3vw, 42px) 30px;
+}
+
+.landing-slider {
+    align-items: end;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid rgba(0, 255, 0, 0.35);
+    border-radius: 10px;
+    box-shadow: 0 26px 90px rgba(0, 0, 0, 0.58);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 390px);
+    min-height: min(760px, calc(100vh - 112px));
+    overflow: hidden;
+    position: relative;
+}
+
+.landing-slider-overlay {
+    background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.44), rgba(0, 0, 0, 0.76)),
+        radial-gradient(circle at 34% 52%, rgba(0, 255, 0, 0.22), transparent 32%);
+    inset: 0;
+    position: absolute;
+}
+
+.landing-copy,
+.landing-info-card {
+    position: relative;
+    z-index: 1;
+}
+
+.landing-copy {
+    max-width: 780px;
+    padding: clamp(28px, 6vw, 78px);
+}
+
+.landing-kicker {
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin: 0 0 14px;
+    text-transform: uppercase;
+}
+
+.landing-copy h1 {
+    font-size: clamp(2.7rem, 8vw, 6.5rem);
+    line-height: 0.92;
+    margin: 0;
+    max-width: 780px;
+    text-transform: uppercase;
+}
+
+.landing-lead {
+    color: #e6f5e8;
+    font-size: clamp(1rem, 2vw, 1.35rem);
+    line-height: 1.55;
+    margin: 24px 0 0;
+    max-width: 620px;
+}
+
+.landing-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.landing-dots {
+    display: flex;
+    gap: 8px;
+    margin-top: 34px;
+}
+
+.landing-dots button {
+    background: rgba(255, 255, 255, 0.28);
+    border: 0;
+    border-radius: 999px;
+    cursor: pointer;
+    height: 8px;
+    transition: all 0.2s ease;
+    width: 28px;
+}
+
+.landing-dots button.active {
+    background: #00ff00;
+    box-shadow: 0 0 16px rgba(0, 255, 0, 0.72);
+    width: 54px;
+}
+
+.landing-info-card {
+    align-self: stretch;
+    background: rgba(4, 6, 5, 0.76);
+    border-left: 1px solid rgba(0, 255, 0, 0.28);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 34px;
+}
+
+.landing-info-card h2 {
+    font-size: 1.6rem;
+    margin: 0 0 18px;
+}
+
+.landing-info-card p,
+.landing-info-card a {
+    color: #d9e7dc;
+    gap: 10px;
+    line-height: 1.5;
+    margin: 8px 0;
+}
+
+.landing-info-card a {
+    background: rgba(0, 255, 0, 0.08);
+    border: 1px solid rgba(0, 255, 0, 0.5);
+    color: #00ff00;
+    margin-top: 18px;
+    width: fit-content;
+}
+
+.landing-services {
+    padding: 24px clamp(14px, 3vw, 42px) 60px;
+}
+
+.landing-section-head {
+    margin: 0 auto 22px;
+    max-width: 1180px;
+}
+
+.landing-section-head p {
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin: 0 0 8px;
+    text-transform: uppercase;
+}
+
+.landing-section-head h2 {
+    font-size: clamp(1.55rem, 3vw, 2.6rem);
+    margin: 0;
+    max-width: 760px;
+}
+
+.service-grid {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    margin: 0 auto;
+    max-width: 1180px;
+}
+
+.service-card {
+    background: rgba(8, 8, 8, 0.78);
+    border: 1px solid rgba(0, 255, 0, 0.2);
+    border-radius: 8px;
+    min-height: 160px;
+    padding: 18px;
+}
+
+.service-card i {
+    color: #00ff00;
+    font-size: 1.35rem;
+}
+
+.service-card h3 {
+    margin: 14px 0 8px;
+}
+
+.service-card p {
+    color: #aab7ae;
+    font-size: 0.92rem;
+    line-height: 1.45;
+    margin: 0;
+}
+
+@media (max-width: 1100px) {
+    .service-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 760px) {
+    .landing-nav {
+        padding: 14px;
+    }
+
+    .landing-brand {
+        font-size: 0.92rem;
+    }
+
+    .landing-nav-actions button:first-child {
+        display: none;
+    }
+
+    .landing-nav-actions button {
+        min-height: 38px;
+        padding: 0 12px;
+        font-size: 0.76rem;
+    }
+
+    .landing-hero {
+        padding: 66px 10px 18px;
+    }
+
+    .landing-slider {
+        grid-template-columns: 1fr;
+        min-height: calc(100vh - 86px);
+    }
+
+    .landing-copy {
+        padding: 26px 18px 18px;
+    }
+
+    .landing-copy h1 {
+        font-size: clamp(2.35rem, 15vw, 4.3rem);
+    }
+
+    .landing-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .landing-info-card {
+        border-left: 0;
+        border-top: 1px solid rgba(0, 255, 0, 0.28);
+        padding: 18px;
+    }
+
+    .landing-info-card a {
+        width: 100%;
+    }
+
+    .landing-services {
+        padding: 10px 10px 36px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: auto;
+    }
+}

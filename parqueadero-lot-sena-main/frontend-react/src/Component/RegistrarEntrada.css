@@ -1,0 +1,386 @@
+/* ============================================================
+   1. CRONÓMETRO DE INGRESO Y FECHA (TIEMPO REAL)
+   ============================================================ */
+.lot-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #00ff00;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    background: transparent;
+}
+
+.lot-title-box h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.green-neon {
+    color: #00ff00;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.lot-clock-box {
+    text-align: right;
+    background: rgba(0, 255, 0, 0.02);
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 255, 0, 0.1);
+}
+
+.label-clock {
+    font-size: 0.7rem;
+    color: #888; /* Color gris del diseño principal */
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.live-datetime {
+    font-size: 1.8rem;
+    font-weight: 900;
+    font-family: 'Courier New', Courier, monospace; /* Estilo digital del panel */
+    letter-spacing: 2px;
+}
+
+.time-highlight {
+    color: #00ff00;
+    margin-left: 15px;
+    text-shadow: 0 0 10px #00ff00;
+}
+
+/* ============================================================
+   2. PANEL DE CÁMARAS CCTV (ARRIBA - COMPACTO)
+   ============================================================ */
+.lot-cctv-top {
+    backdrop-filter: blur(8px);
+    background: linear-gradient(145deg, rgba(15, 15, 15, 0.9), rgba(21, 21, 21, 0.8));
+    padding: 15px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+    border: 1px solid #1a1a1a;
+    box-shadow: inset 0 0 10px rgba(0, 255, 0, 0.1);
+}
+
+.cctv-grid-horizontal {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.cctv-cam {
+    background: #050505;
+    aspect-ratio: 16/9;
+    border: 1px solid #222;
+    position: relative;
+    border-radius: 8px;
+}
+
+.cctv-cam span {
+    position: absolute;
+    top: 5px;
+    left: 8px;
+    font-size: 0.6rem;
+    color: #00ff00;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* ============================================================
+   3. INTERFAZ Y ETIQUETAS (FORMULARIO WIDE Y LABELS ENCIMA)
+   ============================================================ */
+.admision-lot-wrapper {
+    background: transparent;
+    min-height: 100vh;
+    padding: 20px 40px;
+}
+
+.lot-form-panel {
+    backdrop-filter: blur(10px);
+    background: rgba(10, 10, 10, 0.88);
+    padding: 40px;
+    border-radius: 18px;
+    border: 1px solid #1a1a1a;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.lot-form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.lot-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.lot-field label {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #555; /* Color de group-title */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-left: 5px;
+}
+
+/* Cuadros de texto limpios */
+.lot-input, .lot-textarea {
+    background: #050505;
+    border: 1px solid #1a1a1a;
+    color: #ffffff;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.lot-input:focus {
+    border-color: #00ff00;
+    background: rgba(0, 255, 0, 0.02);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.1);
+    color: #5d5a5a;
+}
+
+.full {
+    grid-column: span 3;
+}
+
+/* ============================================================
+   4. LÓGICA DE ASIGNACIÓN (CASILLA PEQUEÑA Y PLACA)
+   ============================================================ */
+.lot-input-placa {
+    background: #050505;
+    border: 2px solid #00ff00;
+    color: #00ff00;
+    padding: 20px;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 15px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    box-shadow: inset 0 0 15px rgba(0, 255, 0, 0.2);
+}
+
+.spot-small {
+    width: 130px; 
+    border: 2px solid #00ff00 !important;
+    background: rgba(0, 255, 0, 0.05) !important;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #00ff00;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+}
+
+.lot-textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* ============================================================
+   5. EL BOTÓN DE ACCIÓN ("INGRESAR" ESTILO PÍLDORA)
+   ============================================================ */
+.lot-action-area {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.lot-btn-pill {
+    background-color: transparent;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    padding: 15px 100px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.lot-btn-pill:hover {
+    background-color: #00ff00;
+    color: black;
+    box-shadow: 0 0 20px #00ff00;
+    transform: translateY(-3px);
+}
+
+.lot-btn-pill:active {
+    transform: translateY(0);
+}
+
+.spot-auto-group {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
+.spot-small[readonly] {
+    cursor: default;
+}
+
+.btn-auto-space {
+    background: #101010;
+    border: 1px solid #00ff00;
+    border-radius: 8px;
+    color: #00ff00;
+    cursor: pointer;
+    font-weight: 800;
+    height: 48px;
+    padding: 0 14px;
+    text-transform: uppercase;
+}
+
+.btn-auto-space:hover {
+    background: #00ff00;
+    color: #000;
+}
+
+.spot-help {
+    color: #777;
+    font-size: 0.72rem;
+    letter-spacing: 0.5px;
+    margin-left: 5px;
+}
+
+.reserva-operario-banner {
+    margin: 18px 0 8px;
+    padding: 12px 16px;
+    border: 1px solid #ffcc00;
+    border-radius: 8px;
+    background: rgba(255, 204, 0, 0.12);
+    color: #ffcc00;
+    font-size: 0.92rem;
+    text-align: center;
+    box-shadow: 0 0 18px rgba(255, 204, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+    .admision-lot-wrapper {
+        min-height: auto;
+        padding: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .lot-header-bar {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 14px;
+        padding-bottom: 12px;
+    }
+
+    .lot-title-box h2 {
+        font-size: 1.15rem;
+        line-height: 1.25;
+    }
+
+    .lot-clock-box {
+        display: none;
+    }
+
+    .lot-cctv-top {
+        display: none;
+    }
+
+    .lot-form-panel {
+        border-radius: 12px;
+        padding: 14px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .lot-form-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        width: 100%;
+    }
+
+    .full {
+        grid-column: auto;
+    }
+
+    .lot-field {
+        min-width: 0;
+    }
+
+    .lot-field label {
+        font-size: 0.62rem;
+        letter-spacing: 1.4px;
+    }
+
+    .lot-input,
+    .lot-textarea,
+    .lot-input-placa {
+        box-sizing: border-box;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .lot-input,
+    .lot-textarea {
+        min-height: 44px;
+        padding: 11px 12px;
+        font-size: 0.9rem;
+    }
+
+    .lot-input-placa {
+        border-radius: 12px;
+        font-size: clamp(1.75rem, 12vw, 2.35rem);
+        letter-spacing: 0.28em;
+        min-height: 78px;
+        padding: 14px 10px;
+    }
+
+    .spot-auto-group {
+        align-items: stretch;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .spot-small {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .btn-auto-space {
+        height: auto;
+        min-height: 48px;
+        padding: 0 12px;
+    }
+
+    .lot-textarea {
+        height: 86px;
+    }
+
+    .lot-action-area {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 22px;
+        width: 100%;
+    }
+
+    .lot-btn-pill {
+        border-radius: 14px;
+        font-size: 0.92rem;
+        line-height: 1.15;
+        min-height: 52px;
+        padding: 13px 12px;
+        width: 100%;
+    }
+}

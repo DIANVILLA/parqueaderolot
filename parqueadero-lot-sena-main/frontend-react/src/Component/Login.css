@@ -1,0 +1,217 @@
+/*=======================================*/
+/* BLOQUE B1: LAYOUT BASE (FONDO)        */
+/*=======================================*/
+.login-container {
+    background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.86), rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.88)),
+        url('https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=1920&q=80');
+    background-color: #050505;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;             
+    display: flex;             
+    justify-content: center;   
+    align-items: center;
+    overflow: hidden;
+    padding: 24px;
+    position: relative;
+}
+
+.login-container::before {
+    background:
+        radial-gradient(circle at 50% 45%, rgba(57, 255, 20, 0.12), transparent 28%),
+        repeating-linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.035) 0,
+            rgba(255, 255, 255, 0.035) 1px,
+            transparent 1px,
+            transparent 120px
+        );
+    content: '';
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+}
+
+.btn-volver-inicio {
+    align-items: center;
+    background: rgba(0, 0, 0, 0.48);
+    border: 1px solid rgba(57, 255, 20, 0.72);
+    border-radius: 8px;
+    color: #39ff14;
+    cursor: pointer;
+    display: inline-flex;
+    font-weight: 900;
+    gap: 6px;
+    left: 24px;
+    min-height: 42px;
+    padding: 0 16px;
+    position: fixed;
+    text-transform: uppercase;
+    top: 22px;
+    z-index: 2;
+}
+
+.btn-volver-inicio:hover {
+    background: rgba(57, 255, 20, 0.12);
+    box-shadow: 0 0 16px rgba(57, 255, 20, 0.28);
+}
+
+/*=======================================*/
+/* BLOQUE B2: CAJA PRINCIPAL (LOGIN BOX) */
+/*=======================================*/
+.login-box {
+    backdrop-filter: blur(10px);
+    background: rgba(17, 17, 17, 0.9);       
+    padding: 2.5rem;           
+    border-radius: 12px;       
+    border: 1px solid #39FF14; 
+    width: 380px;              
+    box-sizing: border-box;    
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.65), 0 0 30px rgba(57, 255, 20, 0.18);
+    position: relative;
+    z-index: 1;
+}
+
+/*=======================================*/
+/* BLOQUE B3: TEXTOS Y ETIQUETAS         */
+/*=======================================*/
+.main-title { 
+    color: white; 
+    text-align: center; 
+    margin-bottom: 2rem; 
+    font-family: sans-serif;
+}
+
+.highlight { 
+    color: #39FF14; 
+    text-shadow: 0 0 10px #39FF14; 
+}
+
+.field { 
+    margin-bottom: 1.5rem; 
+    width: 100%;
+}
+
+.field label { 
+    color: #888; 
+    display: block; 
+    margin-bottom: 8px; 
+    font-size: 11px; 
+    text-transform: uppercase; 
+}
+
+/*=======================================*/
+/* BLOQUE B4: CONTENEDOR LÓGICO (WRAPPER)*/
+/*=======================================*/
+.custom-input-wrapper {
+    position: relative; 
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/*=======================================*/
+/* BLOQUE B5: ESTILO DE LOS INPUTS       */
+/*=======================================*/
+.custom-padding {
+    width: 100% !important;        
+    background: #1a1a1a !important; 
+    color: white !important;       
+    border: 1px solid #333 !important; 
+    padding: 12px 45px !important; 
+    border-radius: 6px !important;
+    box-sizing: border-box;
+}
+
+.custom-padding:focus {
+    border-color: #39FF14 !important; 
+    outline: none;
+}
+
+/*=======================================*/
+/* BLOQUE B6: POSICIONAMIENTO DE ICONOS  */
+/*=======================================*/
+.icon-left {
+    position: absolute;
+    left: 15px;               
+    color: #39FF14;
+    z-index: 10;
+    pointer-events: none;     
+}
+
+.icon-right-eye {
+    position: absolute !important;
+    right: 15px !important;    
+    top: 50% !important;       
+    transform: translateY(-50%) !important;
+    color: #39FF14 !important; 
+    cursor: pointer;           
+    z-index: 10;
+    font-size: 1.1rem;
+}
+
+.icon-right-eye:hover {
+    color: #ffffff !important; 
+}
+
+/*=======================================*/
+/* BLOQUE B7: BOTÓN DE INGRESO           */
+/*=======================================*/
+.btn-ingresar {
+    background: #39FF14 !important; 
+    border: none !important;
+    color: black !important;        
+    width: 100% !important;
+    font-weight: bold !important;
+    padding: 14px !important;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.3s;               
+}
+
+.btn-ingresar:hover {
+    background: #32e612 !important; 
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
+}
+
+.btn-cliente-portal {
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px;
+    border: 1px solid #39ff14;
+    border-radius: 6px;
+    background: rgba(57, 255, 20, 0.08);
+    color: #39ff14;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-cliente-portal:hover {
+    background: rgba(57, 255, 20, 0.18);
+    box-shadow: 0 0 14px rgba(57, 255, 20, 0.25);
+}
+
+/*=======================================*/
+/* BLOQUE B8: NOTIFICACIONES (TOAST)     */
+/*=======================================*/
+.p-toast .p-toast-message {
+    background: #121212 !important;       
+    border: 1px solid #39ff14 !important; 
+    color: white !important;
+}
+
+@media (max-width: 760px) {
+    .btn-volver-inicio {
+        left: 14px;
+        min-height: 38px;
+        padding: 0 12px;
+        top: 14px;
+        font-size: 0.76rem;
+    }
+
+    .login-container {
+        padding: 72px 16px 24px;
+    }
+}
