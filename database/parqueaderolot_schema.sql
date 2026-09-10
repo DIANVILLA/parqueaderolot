@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS clientes (
 CREATE TABLE IF NOT EXISTS usuarios (
   id BIGINT NOT NULL AUTO_INCREMENT,
   correo VARCHAR(50) NOT NULL,
-  password VARCHAR(10) NOT NULL,
+  password VARCHAR(100) NOT NULL, -- debe caber un hash BCrypt (60 caracteres), no solo la contrasena semilla en texto plano
   `nombres del usuario` VARCHAR(20) NOT NULL,
   `apellido del usuario` VARCHAR(20) NOT NULL,
   rol VARCHAR(20) NOT NULL,

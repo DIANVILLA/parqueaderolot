@@ -23,14 +23,18 @@ CLIENTE · ADMINISTRADOR · OPERARIO · CONTADOR · CAJERO
 - **Frontend:** React 18, React Router, PrimeReact, Chart.js, Axios
 - **Base de datos:** MySQL 8.0
 - **Build:** Maven (backend, con wrapper `mvnw`), npm (frontend)
+- Docker + docker-compose
+- GitHub Actions (CI)
 
 ## Estructura del proyecto
 
 ```
 parqueadero-lot-sena-main/
 ├── README.md
-├── backend/              Spring Boot (puerto 8090)
-├── frontend-react/       React (puerto 3000)
+├── docker-compose.yml
+├── .github/workflows/ci.yml
+├── backend/              Spring Boot (puerto 8090), con su propio Dockerfile
+├── frontend-react/       React (puerto 3000), con su propio Dockerfile + nginx.conf
 ├── database/
 │   └── parqueaderolot_schema.sql
 ├── docs/                 Documentación del proyecto
@@ -97,6 +101,20 @@ usuario: ricardoriascos07@gmail.com
 password: 1234
 ```
 
+### Con Docker (alternativa — no necesita Java, Node ni MySQL instalados)
+
+```bash
+docker compose up --build
+```
+
+Levanta los tres servicios en contenedores separados: `db` (MySQL, con el esquema aplicado automáticamente al arrancar por primera vez), `backend` (`http://localhost:8090`) y `frontend` (`http://localhost:3000`, servido por Nginx). MySQL queda expuesto en el puerto `3307` del host, no `3306`, para no chocar con un MySQL local ya instalado.
+
+El backend busca primero variables de entorno (`DB_URL`, `DB_USER`, `DB_PASSWORD`) y solo si no existen cae a los valores locales de siempre en `application.properties` — así el mismo jar sirve para desarrollo local y para un contenedor, sin hornear ninguna contraseña dentro de la imagen. El frontend detecta automáticamente que corre en `localhost` y apunta sus peticiones a `http://localhost:8090/api`, sin configuración adicional.
+
+## CI/CD
+
+`.github/workflows/ci.yml` corre en cada push y cada Pull Request a `main`, con dos jobs independientes (backend y frontend): compila el backend y corre sus tests, instala dependencias y compila el build de producción del frontend, y construye ambas imágenes Docker — así cualquier cambio que rompa el build se ve antes de fusionarlo, no después.
+
 ## Documentación
 
 - [Documentación de la API (endpoints)](docs/api.md)
@@ -113,3 +131,4 @@ password: 1234
 
 - `frontend-react/src/RegistrarEntrada.jsx` pertenece a una versión anterior; la pantalla vigente es `frontend-react/src/Component/RegistrarEntrada.jsx`.
 - No incluir en la entrega: `frontend-react/node_modules`, `frontend-react/build`, `backend/target`, `.git`, archivos `.env`.
+- `usuarios.password` en `database/parqueaderolot_schema.sql` se amplió de `VARCHAR(10)` a `VARCHAR(100)` (coincidiendo con `@Column(length=100)` en la entidad `Usuarios`): un hash BCrypt ocupa 60 caracteres, y con la columna en 10 el arranque en un MySQL nuevo (por ejemplo, en Docker) fallaba al migrar la contraseña semilla a BCrypt.
