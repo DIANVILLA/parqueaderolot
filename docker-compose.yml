@@ -1,0 +1,40 @@
+services:
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: parqueadero
+      MYSQL_DATABASE: parqueaderolot
+    volumes:
+      - db-data:/var/lib/mysql
+      # La imagen oficial de MySQL corre automaticamente, una sola vez (al crear el volumen
+      # vacio la primera vez), cualquier .sql que encuentre aqui — asi el esquema se aplica solo.
+      - ./database/parqueaderolot_schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    ports:
+      - "3307:3306" # 3307 en el host para no chocar con un MySQL local ya corriendo en 3306
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-pparqueadero"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build: ./backend
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_URL: jdbc:mysql://db:3306/parqueaderolot # "db" es el nombre del servicio de arriba, resuelto por la red interna de docker-compose
+      DB_USER: root
+      DB_PASSWORD: parqueadero
+    ports:
+      - "8090:8090"
+
+  frontend:
+    build: ./frontend-react
+    depends_on:
+      - backend
+    ports:
+      - "3000:80" # el navegador entra por 3000; adentro del contenedor Nginx escucha en el 80 de siempre
+
+volumes:
+  db-data:
